@@ -32,17 +32,11 @@ export default function Page() {
                     </div>
                 </div>
                 <Separator className='h-1' />
-            </div>
-            <div className='h-full'>
-                <div className='text-muted-foreground'>
-                    포인트 이력이 없습니다
+                <div className='h-full flex flex-col divide-y'>
+                    <div className='w-full h-full flex flex-col items-center justify-center'>
+                        <div className='text-muted-foreground'>포인트 이력이 없습니다</div>
+                    </div>
                 </div>
-            </div>
-            <div className='absolute bottom-6 w-full px-4 '>
-                <Button variant={'ghost'} className='w-full text-md rounded-2xl shadow-md shadow-black/10 py-6 text-green-500 hover:text-green-500 font-semibold shadow-top'>
-                    <Image src={'/images/pay.png'} alt='pay' width={80} height={180} />
-                    포인트 전환하기
-                </Button>
             </div>
         </div>
     )

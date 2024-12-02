@@ -32,17 +32,29 @@ export default function Page() {
                     </div>
                 </div>
                 <Separator className='h-1' />
-            </div>
-            <div className='h-full'>
-                <div className='text-muted-foreground'>
-                    포인트 이력이 없습니다
+                <div className='flex flex-col divide-y'>
+                    <div className='flex justify-between items-center '>
+                        <div className='space-y-1 py-2'>
+                            <div className='text-muted-foreground text-[12px]'>2024.10.01 11:50</div>
+                            <div>출석 체크</div>
+                        </div>
+                        <div className='text-blue-500 font-semibold'>+ 100P</div>
+                    </div>
+                    <div className='flex justify-between items-center '>
+                        <div className='space-y-1 py-2'>
+                            <div className='text-muted-foreground text-[12px]'>2024.10.01 11:50</div>
+                            <div>출석 체크</div>
+                        </div>
+                        <div className='text-blue-500 font-semibold'>+ 100P</div>
+                    </div>
+                    <div className='flex justify-between items-center '>
+                        <div className='space-y-1 py-2'>
+                            <div className='text-muted-foreground text-[12px]'>2024.10.01 11:50</div>
+                            <div>아이스 아메리카노 구매</div>
+                        </div>
+                        <div className='text-primary font-semibold'>- 1,000P</div>
+                    </div>
                 </div>
-            </div>
-            <div className='absolute bottom-6 w-full px-4 '>
-                <Button variant={'ghost'} className='w-full text-md rounded-2xl shadow-md shadow-black/10 py-6 text-green-500 hover:text-green-500 font-semibold shadow-top'>
-                    <Image src={'/images/pay.png'} alt='pay' width={80} height={180} />
-                    포인트 전환하기
-                </Button>
             </div>
         </div>
     )

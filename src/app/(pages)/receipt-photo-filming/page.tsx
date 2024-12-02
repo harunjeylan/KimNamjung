@@ -27,7 +27,7 @@ export default function Page() {
             </div>
             <div className='absolute bottom-20 left-1/2 -translate-x-1/2'>
                 <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="2" width="71" height="71" rx="35.5" stroke="white" stroke-width="4" />
+                    <rect x="2" y="2" width="71" height="71" rx="35.5" stroke="white" strokeWidth="4" />
                     <rect x="7.28906" y="7.2915" width="60.4167" height="60.4167" rx="30.2083" fill="white" />
                 </svg>
             </div>

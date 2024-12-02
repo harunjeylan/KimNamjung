@@ -28,8 +28,8 @@ export const Icons = {
   ),
   x: (props: IconProps) => (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className={props.className}>
-      <path d="M16 2L2 16" stroke="#ADADAD" stroke-width="2" stroke-linecap="round" />
-      <path d="M2 2L16 16" stroke="#ADADAD" stroke-width="2" stroke-linecap="round" />
+      <path d="M16 2L2 16" stroke="#ADADAD" strokeWidth="2" strokeLinecap="round" />
+      <path d="M2 2L16 16" stroke="#ADADAD" strokeWidth="2" strokeLinecap="round" />
     </svg>
   ),
   warning: (props: IconProps & { fill?: string }) => (
