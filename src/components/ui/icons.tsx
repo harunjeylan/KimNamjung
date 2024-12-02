@@ -1,9 +1,9 @@
 type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
-  checked: (props: IconProps & { active?: boolean }) => (
+  checked: (props: IconProps & { fill?: string }) => (
     <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg" className={props.className} {...props}>
-      <circle cx="17.3423" cy="17.8603" r="17.3423" fill={props.active ? "#FF5E18" : "#D9D9D9"} />
+      <circle cx="17.3423" cy="17.8603" r="17.3423" fill={props.fill ?? "#FF5E18"} />
       <g clipPath="url(#clip0_1332_57009)">
         <rect x="9.89844" y="13.8979" width="14.1824" height="3.36181" rx="1.6809" transform="rotate(50.5818 9.89844 13.8979)" fill="white" />
         <rect x="27.1953" y="9.50098" width="19.4734" height="3.36181" rx="1.6809" transform="rotate(120 27.1953 9.50098)" fill="white" />

@@ -66,13 +66,13 @@ export default function Page() {
                         </div>
                     </div>
                     <div className='w-full px-4 flex justify-between overflow-hidden translate-y-[40%]'>
-                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100 rounded-full shadow-inner' />
-                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100 rounded-full shadow-inner' />
-                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100 rounded-full shadow-inner' />
-                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100 rounded-full shadow-inner' />
-                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100 rounded-full shadow-inner' />
-                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100 rounded-full shadow-inner' />
-                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100 rounded-full shadow-inner' />
+                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100/90 rounded-t-full shadow-inner' />
+                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100/90 rounded-t-full shadow-inner' />
+                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100/90 rounded-t-full shadow-inner' />
+                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100/90 rounded-t-full shadow-inner' />
+                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100/90 rounded-t-full shadow-inner' />
+                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100/90 rounded-t-full shadow-inner' />
+                        <span className='p-4 bg-gradient-to-b from-black/30 via-gray-200 to-gray-100/90 rounded-t-full shadow-inner' />
                     </div>
                 </div>
             </div>

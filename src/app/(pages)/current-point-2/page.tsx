@@ -1,7 +1,5 @@
-import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/ui/icons'
 import { Separator } from '@/components/ui/separator'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Page() {

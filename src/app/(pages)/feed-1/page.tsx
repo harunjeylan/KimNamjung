@@ -51,7 +51,7 @@ export default function Page() {
                         ))}
                     </ScrollableTabsList>
                     <TabsContent value={(18).toString()} >
-                        <ScrollArea className='h-[calc(100vh-10rem)]'>
+                        <ScrollArea className='h-[calc(100vh-10rem)] pb-4'>
                             <div className='space-y-4'>
                                 <div className='w-full px-4 flex flex-col gap-2 justify-center items-center space-y-2 pt-8'>
                                     <div>눈치 게임 진행 중!</div>
@@ -136,7 +136,7 @@ export default function Page() {
                         </ScrollArea>
                     </TabsContent>
                     <TabsContent value={(19).toString()}>
-                        <ScrollArea className='h-[calc(100vh-10rem)]'>
+                        <ScrollArea className='h-[calc(100vh-10rem)] pb-4'>
                             <div className='space-y-4'>
                                 <div className='w-full px-4 flex flex-col gap-2 justify-center items-center space-y-2 pt-8'>
                                     <div>게임 종료</div>
@@ -227,7 +227,7 @@ export default function Page() {
                         </ScrollArea>
                     </TabsContent>
                     <TabsContent value={(20).toString()}>
-                        <ScrollArea className='h-[calc(100vh-10rem)]'>
+                        <ScrollArea className='h-[calc(100vh-10rem)] pb-4'>
                             <div className='space-y-4'>
                                 <div className='w-full px-4 flex flex-col gap-2 justify-center items-center space-y-2 pt-8'>
                                     <div>준비 중</div>

@@ -1,12 +1,14 @@
+'use client'
 import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/ui/icons'
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
+import { useState } from 'react'
 
 
 export default function Page() {
-
+    const [answer, setAnswer] = useState<Record<number, string>>({})
     return (
         <div className='h-full space-y-4 pt-4'>
             <nav className='w-full flex flex-col gap-4'>
@@ -30,16 +32,16 @@ export default function Page() {
                             <span>1.</span><span>일반 퀴즈 입니다. 일반 퀴즈 입니다. 일반 퀴즈 입니다. 일반 퀴즈 입니다.</span>
                         </div>
                         <div className='w-full px-4 space-y-2'>
-                            <Button variant="outline" className={cn('bg-primary/10 hover:bg-primary/15 border-primary w-full justify-start text-start text-muted-foreground')}>
+                            <Button onClick={() => setAnswer(pre => ({ ...pre, [0]: "A" }))} variant="outline" className={cn('w-full justify-start text-start', answer[0] === "A" ? 'bg-primary/10 hover:bg-primary/15 border-primary text-muted-foreground' : "")}>
                                 항목1
                             </Button>
-                            <Button variant="outline" className="w-full justify-start text-start">
+                            <Button onClick={() => setAnswer(pre => ({ ...pre, [0]: "B" }))} variant="outline" className={cn('w-full justify-start text-start', answer[0] === "B" ? 'bg-primary/10 hover:bg-primary/15 border-primary text-muted-foreground' : "")}>
                                 항목2
                             </Button>
-                            <Button variant="outline" className="w-full justify-start text-start">
+                            <Button onClick={() => setAnswer(pre => ({ ...pre, [0]: "C" }))} variant="outline" className={cn('w-full justify-start text-start', answer[0] === "C" ? 'bg-primary/10 hover:bg-primary/15 border-primary text-muted-foreground' : "")}>
                                 항목3
                             </Button>
-                            <Button variant="outline" className="w-full justify-start text-start">
+                            <Button onClick={() => setAnswer(pre => ({ ...pre, [0]: "D" }))} variant="outline" className={cn('w-full justify-start text-start', answer[0] === "D" ? 'bg-primary/10 hover:bg-primary/15 border-primary text-muted-foreground' : "")}>
                                 항목4
                             </Button>
                         </div>
@@ -49,16 +51,16 @@ export default function Page() {
                             <span>1.</span><span>일반 퀴즈 입니다. 일반 퀴즈 입니다. 일반 퀴즈 입니다. 일반 퀴즈 입니다.</span>
                         </div>
                         <div className='w-full px-4 space-y-2'>
-                            <Button variant="outline" className={cn('bg-primary/10 hover:bg-primary/15 border-primary w-full justify-start text-start text-muted-foreground')}>
+                            <Button onClick={() => setAnswer(pre => ({ ...pre, [1]: "A" }))} variant="outline" className={cn('w-full justify-start text-start', answer[1] === "A" ? 'bg-primary/10 hover:bg-primary/15 border-primary text-muted-foreground' : "")}>
                                 항목1
                             </Button>
-                            <Button variant="outline" className="w-full justify-start text-start">
+                            <Button onClick={() => setAnswer(pre => ({ ...pre, [1]: "B" }))} variant="outline" className={cn('w-full justify-start text-start', answer[1] === "B" ? 'bg-primary/10 hover:bg-primary/15 border-primary text-muted-foreground' : "")}>
                                 항목2
                             </Button>
-                            <Button variant="outline" className="w-full justify-start text-start text-primary">
+                            <Button onClick={() => setAnswer(pre => ({ ...pre, [1]: "C" }))} variant="outline" className={cn('w-full justify-start text-start', answer[1] === "C" ? 'bg-primary/10 hover:bg-primary/15 border-primary text-muted-foreground' : "")}>
                                 항목3
                             </Button>
-                            <Button variant="outline" className="w-full justify-start text-start">
+                            <Button onClick={() => setAnswer(pre => ({ ...pre, [1]: "D" }))} variant="outline" className={cn('w-full justify-start text-start', answer[1] === "D" ? 'bg-primary/10 hover:bg-primary/15 border-primary text-muted-foreground' : "")}>
                                 항목4
                             </Button>
                         </div>

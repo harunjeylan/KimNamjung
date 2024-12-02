@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/ui/icons'
 import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
+import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
 export default function Page() {
@@ -25,7 +26,7 @@ export default function Page() {
                 </div>
             </div>
             <div className='w-[350px] mx-auto'>
-                <Button size={'lg'} variant={'muted'} className='w-full rounded-xl py-6 bg-[#ADADAD] text-white hover:text-primary-foreground hover:bg-primary/90'>다음</Button>
+                <Button size={'lg'} variant={'muted'} className={cn('w-full rounded-xl py-6', 'bg-[#ADADAD] text-white ', ' hover:text-primary-foreground hover:bg-primary/90 bg-primary')}>다음</Button>
             </div>
         </div>
     )

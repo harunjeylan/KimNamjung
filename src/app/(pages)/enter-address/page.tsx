@@ -13,22 +13,20 @@ export default function Page() {
                     <Link href={".."} className='flex items-center gap-4'>
                         <Icons.arrowLeft className='size-5' />
                         <span className='text-lg'>
-                            비밀번호 찾기
+                            회원가입
                         </span>
                     </Link>
                 </div>
                 <Separator />
             </nav>
             <div className='w-full h-full pt-4 px-4 space-y-4'>
-                <div className='text-muted-foreground font-semibold'>비밀번호를 입력해 주세요</div>
+                <div className='text-muted-foreground font-semibold'>경품을 수령할 주소를 입력해주세요</div>
                 <div className='w-full flex flex-col gap-4'>
-                    <Input placeholder='비밀번호를 입력해 주세요' type='password' className='h-10' />
-                    <Input placeholder='비밀번호를 입력해 주세요' type='password' className='h-10' />
-                    <div className='text-muted-foreground text-[12px]'>영문, 숫자를 조합해 6-15자리로 입력해 주세요</div>
+                    <Input placeholder='주소를 입력해주세요' type='text' className='h-10' />
                 </div>
             </div>
             <div className='w-[350px] mx-auto'>
-                <Button size={'lg'} variant={'muted'} className={cn('w-full rounded-xl py-6', 'bg-[#ADADAD] text-white ', ' hover:text-primary-foreground hover:bg-primary/90 bg-primary')}>다음</Button>
+                <Button size={'lg'} variant={'muted'} className={cn('w-full rounded-xl py-6', 'bg-[#ADADAD] text-white ', ' hover:text-primary-foreground hover:bg-primary/90 bg-primary')}>확인</Button>
             </div>
         </div>
     )

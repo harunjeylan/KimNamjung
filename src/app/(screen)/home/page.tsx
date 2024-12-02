@@ -1,3 +1,4 @@
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { Icons } from "@/components/ui/icons"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
@@ -54,52 +55,58 @@ export default function Home() {
       </div>
       <div className="space-y-2">
         <div className="w-full px-4 text-lg">매일매일 쏟아지는 다양한 혜택</div>
-        <ScrollArea className='max-w-[390px]'>
-          <div className="flex gap-4 px-4">
-            {products.map((product, index) => (
-              <div key={index} className="w-[288px] h-[187px] bg-[#FFD8D8] rounded-xl" />
+        <Carousel className="w-full">
+          <CarouselContent className='px-4'>
+            {Array.from({ length: 6 }).map((_, index) => (
+              <CarouselItem key={index} className='relative max-w-[340px]'>
+                <div key={index} className="w-full h-[187px] bg-[#FFD8D8] rounded-xl" />
+              </CarouselItem>
             ))}
-          </div>
-          <ScrollBar orientation="horizontal" className='hidden' />
-        </ScrollArea>
+            <CarouselItem className='relative max-w-[20px]' />
+          </CarouselContent>
+        </Carousel>
       </div>
       <div className="space-y-2">
         <div className="w-full px-4 text-lg">상품 구매</div>
-        <ScrollArea className='max-w-[390px]'>
-          <div className="flex gap-4 p-4">
-            {products.map((product, index) => (
-              <div key={index} className="w-[340px] shrink-0 flex flex-row items-center justify-between relative"  >
-                <div className="w-full flex items-start gap-4 px-4 py-4  border rounded-2xl shadow-lg ">
-                  <Image
-                    src="/images/Starbucks.png"
-                    alt="Starbucks Drink"
-                    width={60}
-                    height={60}
-                    className="object-cover aspect-square h-full"
-                  />
-                  <div>
-                    <div className="text-muted-foreground text-sm">스타벅스</div>
-                    <div>아이스 아메리카노</div>
-                    <div className="text-muted-foreground text-sm">~12월 31일 까지</div>
+        <Carousel className="w-full">
+          <CarouselContent className='px-4'>
+            {Array.from({ length: 6 }).map((_, index) => (
+              <CarouselItem key={index} className='relative max-w-[340px]'>
+                <div className="w-full h-[80px] my-4 flex flex-row items-center justify-between"  >
+                  <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 ps-2 shadow-lg rounded-xl">
+                    <Image
+                      src="/images/Starbucks.png"
+                      alt="Starbucks"
+                      width={80}
+                      height={80}
+                      className="h-[60px] w-[60px] object-cover"
+                    />
+                    <div className="w-[calc(100%-5rem)]">
+                      <div className="text-muted-foreground text-[10px]">스타벅스</div>
+                      <div>아이스 아메리카노</div>
+                      <div className="text-muted-foreground text-[10px]">~12월 31일 까지</div>
+                    </div>
                   </div>
-                </div>
-                <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-10px)] flex flex-col items-center gap-2 w-1 bg-[#FFD8D8]'>
-                  <div className='h-1/3 w-1 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
-                  <div className='h-1/3 w-1 bg-border/80 rounded-full' />
-                  <div className='h-1/3 w-1 bg-border rounded-full' />
-                  <div className='h-1/3 w-1 bg-border rounded-t-full' />
-                </div>
-                <div className="h-full w-24 border rounded-2xl shadow-lg  px-4 bg-[#FFD8D8]">
-                  <div className="h-full flex flex-col shrink-0 justify-center items-center">
-                    <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
-                    <div className="text-sm text-primary">300 P</div>
+                  <div className='absolute right-0 flex h-[80px]'>
+                    <div className="z-10 h-full flex flex-col items-center gap-2">
+                      <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border rounded-b-full' />
+                      <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
+                      <div className='h-1/3 w-0.5 bg-border rounded-full' />
+                      <div className='h-1/3 w-0.5 bg-gradient-to-b rounded-t-full from-border to-border' />
+                    </div>
+                    <div className="h-full w-[5rem] rounded-lg shadow-lg bg-[#FFEFE8]">
+                      <div className="h-full flex flex-col shrink-0 justify-center items-center">
+                        <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
+                        <div className="text-sm text-primary">300 P</div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div >
+                </div >
+              </CarouselItem>
             ))}
-          </div>
-          <ScrollBar orientation="horizontal" className='hidden' />
-        </ScrollArea>
+            <CarouselItem className='relative max-w-[20px]' />
+          </CarouselContent>
+        </Carousel>
       </div>
     </div>
   )

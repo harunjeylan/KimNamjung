@@ -1,5 +1,6 @@
 import { buttonVariants } from '@/components/ui/button'
 import { Icons } from '@/components/ui/icons'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
@@ -14,20 +15,20 @@ export default function Page() {
 
 
     return (
-        <div className='relative py-6 flex flex-col justify-between h-full gap-2'>
-            <div className='space-y-4'>
-                <nav className='w-full flex flex-col gap-4'>
-                    <div className='w-[350px] mx-auto flex justify-between items-center '>
-                        <Link href={".."} className='flex items-center gap-4'>
-                            <Icons.arrowLeft className='size-5' />
-                            <span className='text-lg'>
-                                출석 체크
-                            </span>
-                        </Link>
-                    </div>
-                    <Separator />
-                </nav>
-                <div className='w-full h-full pt-4 px-4'>
+        <div className='relative'>
+            <nav className='w-full flex flex-col gap-4 py-4'>
+                <div className='w-[350px] mx-auto flex justify-between items-center '>
+                    <Link href={".."} className='flex items-center gap-4'>
+                        <Icons.arrowLeft className='size-5' />
+                        <span className='text-lg'>
+                            출석 체크
+                        </span>
+                    </Link>
+                </div>
+                <Separator />
+            </nav>
+            <ScrollArea className='h-[calc(100vh-9rem)] relative overflow-y-auto'>
+                <div className='w-full h-full py-4 px-4'>
                     <div className="flex flex-col gap-4 px-4">
                         <div className='w-full text-center'>
                             매일매일 터지는 포인트!
@@ -41,15 +42,16 @@ export default function Page() {
                             {products.map((key, idx) => (
                                 <div key={key} className="flex flex-col items-center justify-center">
                                     <div className='text-sm'>{idx}일</div>
-                                    <Icons.checked active={(key === 1)} />
-                                    <div className={cn('text-sm', (key === 1) ? "" : " text-muted-foreground/60")}>+500P</div>
+                                    <Icons.checked fill={(idx === 0) ? "#FF5E18" : "#D9D9D9"} />
+                                    <div className={cn('text-sm', (idx === 0) ? "" : " text-muted-foreground/60")}>+500P</div>
                                 </div>
                             ))}
                         </div>
                         <Link href={'#'} className={cn(buttonVariants(), 'w-full rounded-b-3xl rounded-t-none py-5')}>출석체크하기</Link>
                     </div>
                 </div>
-            </div>
+                <ScrollBar className="w-0.5" />
+            </ScrollArea>
         </div >
     )
 }

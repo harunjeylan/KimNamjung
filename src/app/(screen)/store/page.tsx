@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import { DialogFooter } from '@/components/ui/dialog'
 import { Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerPortal, DrawerTitle, DrawerTrigger } from '@/components/ui/drawer'
 import { Icons } from '@/components/ui/icons'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Share2Icon, X } from "lucide-react"
@@ -74,280 +75,284 @@ export default function Page() {
                         <div className="text-sm text-primary">300 P</div>
                     </div>
                 </div>
-                <TabsContent value='tab1'>
-                    <div className="w-full px-4 mx-auto space-y-4">
-                        <div className="space-y-4">
-                            <div className="h-[80px] flex flex-row items-center justify-between relative"  >
-                                <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
-                                    <Image
-                                        src="/images/Starbucks.png"
-                                        alt="Starbucks"
-                                        width={80}
-                                        height={80}
-                                        className="h-[60px] w-[60px] object-cover"
-                                    />
-                                    <div className="text-sm space-y-1">
-                                        <p className="text-muted-foreground">~[스타벅스]</p>
-                                        <h3 className="">아이스 아메리카노</h3>
-                                        <p className="text-muted-foreground">~12월 31일 까지</p>
+                <ScrollArea className='h-[calc(100vh-12rem)] py-2 relative overflow-y-auto'>
+                    <TabsContent value='tab1'>
+                        <div className="w-full px-4 mx-auto space-y-4">
+                            <div className="space-y-4">
+                                <div className="h-[80px] flex flex-row items-center justify-between relative"  >
+                                    <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
+                                        <Image
+                                            src="/images/Starbucks.png"
+                                            alt="Starbucks"
+                                            width={80}
+                                            height={80}
+                                            className="h-[60px] w-[60px] object-cover"
+                                        />
+                                        <div className="text-sm space-y-1">
+                                            <p className="text-muted-foreground">~[스타벅스]</p>
+                                            <h3 className="">아이스 아메리카노</h3>
+                                            <p className="text-muted-foreground">~12월 31일 까지</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
-                                    <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
-                                    <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
-                                </div>
-                                <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
-                                    <div className="h-full flex flex-col shrink-0 justify-center items-center">
-                                        <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
-                                        <div className="text-sm text-primary">300 P</div>
+                                    <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
+                                        <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
+                                        <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
                                     </div>
-                                </div>
-                            </div >
-                            <div className="h-[80px] flex flex-row items-center justify-between relative"  >
-                                <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
-                                    <Image
-                                        src="/images/Starbucks.png"
-                                        alt="Starbucks"
-                                        width={80}
-                                        height={80}
-                                        className="h-[60px] w-[60px] object-cover"
-                                    />
-                                    <div className="text-sm space-y-1">
-                                        <p className="text-muted-foreground">~[스타벅스]</p>
-                                        <h3 className="">아이스 아메리카노</h3>
-                                        <p className="text-muted-foreground">~12월 31일 까지</p>
+                                    <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
+                                        <div className="h-full flex flex-col shrink-0 justify-center items-center">
+                                            <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
+                                            <div className="text-sm text-primary">300 P</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
-                                    <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
-                                    <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
-                                </div>
-                                {/* <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
+                                </div >
+                                <div className="h-[80px] flex flex-row items-center justify-between relative"  >
+                                    <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
+                                        <Image
+                                            src="/images/Starbucks.png"
+                                            alt="Starbucks"
+                                            width={80}
+                                            height={80}
+                                            className="h-[60px] w-[60px] object-cover"
+                                        />
+                                        <div className="text-sm space-y-1">
+                                            <p className="text-muted-foreground">~[스타벅스]</p>
+                                            <h3 className="">아이스 아메리카노</h3>
+                                            <p className="text-muted-foreground">~12월 31일 까지</p>
+                                        </div>
+                                    </div>
+                                    <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
+                                        <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
+                                        <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
+                                    </div>
+                                    {/* <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
                             <div className="h-full flex flex-col shrink-0 justify-center items-center">
                                 <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
                                 <div className="text-sm text-primary">300 P</div>
                             </div>
                         </div> */}
-                            </div >
-                            <div className="h-[80px] flex flex-row items-center justify-between relative"  >
-                                <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
-                                    <Image
-                                        src="/images/Starbucks.png"
-                                        alt="Starbucks"
-                                        width={80}
-                                        height={80}
-                                        className="h-[60px] w-[60px] object-cover"
-                                    />
-                                    <div className="text-sm space-y-1">
-                                        <p className="text-muted-foreground">~[스타벅스]</p>
-                                        <h3 className="">아이스 아메리카노</h3>
-                                        <p className="text-muted-foreground">~12월 31일 까지</p>
+                                </div >
+                                <div className="h-[80px] flex flex-row items-center justify-between relative"  >
+                                    <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
+                                        <Image
+                                            src="/images/Starbucks.png"
+                                            alt="Starbucks"
+                                            width={80}
+                                            height={80}
+                                            className="h-[60px] w-[60px] object-cover"
+                                        />
+                                        <div className="text-sm space-y-1">
+                                            <p className="text-muted-foreground">~[스타벅스]</p>
+                                            <h3 className="">아이스 아메리카노</h3>
+                                            <p className="text-muted-foreground">~12월 31일 까지</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
-                                    <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
-                                    <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
-                                </div>
-                                <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
-                                    <div className="h-full flex flex-col shrink-0 justify-center items-center">
-                                        <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
-                                        <div className="text-sm text-primary">300 P</div>
+                                    <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
+                                        <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
+                                        <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
                                     </div>
-                                </div>
-                            </div >
-                            <div className="h-[80px] flex flex-row items-center justify-between relative"  >
-                                <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
-                                    <Image
-                                        src="/images/Starbucks.png"
-                                        alt="Starbucks"
-                                        width={80}
-                                        height={80}
-                                        className="h-[60px] w-[60px] object-cover"
-                                    />
-                                    <div className="text-sm space-y-1">
-                                        <p className="text-muted-foreground">~[스타벅스]</p>
-                                        <h3 className="">아이스 아메리카노</h3>
-                                        <p className="text-muted-foreground">~12월 31일 까지</p>
+                                    <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
+                                        <div className="h-full flex flex-col shrink-0 justify-center items-center">
+                                            <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
+                                            <div className="text-sm text-primary">300 P</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
-                                    <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
-                                    <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
-                                </div>
-                                {/* <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
+                                </div >
+                                <div className="h-[80px] flex flex-row items-center justify-between relative"  >
+                                    <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
+                                        <Image
+                                            src="/images/Starbucks.png"
+                                            alt="Starbucks"
+                                            width={80}
+                                            height={80}
+                                            className="h-[60px] w-[60px] object-cover"
+                                        />
+                                        <div className="text-sm space-y-1">
+                                            <p className="text-muted-foreground">~[스타벅스]</p>
+                                            <h3 className="">아이스 아메리카노</h3>
+                                            <p className="text-muted-foreground">~12월 31일 까지</p>
+                                        </div>
+                                    </div>
+                                    <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
+                                        <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
+                                        <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
+                                    </div>
+                                    {/* <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
                             <div className="h-full flex flex-col shrink-0 justify-center items-center">
                                 <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
                                 <div className="text-sm text-primary">300 P</div>
                             </div>
                         </div> */}
+                                </div >
+                                <div className="h-[80px] flex flex-row items-center justify-between relative"  >
+                                    <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
+                                        <Image
+                                            src="/images/Starbucks.png"
+                                            alt="Starbucks"
+                                            width={80}
+                                            height={80}
+                                            className="h-[60px] w-[60px] object-cover"
+                                        />
+                                        <div className="text-sm space-y-1">
+                                            <p className="text-muted-foreground">~[스타벅스]</p>
+                                            <h3 className="">아이스 아메리카노</h3>
+                                            <p className="text-muted-foreground">~12월 31일 까지</p>
+                                        </div>
+                                    </div>
+                                    <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
+                                        <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
+                                        <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
+                                    </div>
+                                    <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
+                                        <div className="h-full flex flex-col shrink-0 justify-center items-center">
+                                            <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
+                                            <div className="text-sm text-primary">300 P</div>
+                                        </div>
+                                    </div>
+                                </div >
+                                <div className="h-[80px] flex flex-row items-center justify-between relative"  >
+                                    <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
+                                        <Image
+                                            src="/images/Starbucks.png"
+                                            alt="Starbucks"
+                                            width={80}
+                                            height={80}
+                                            className="h-[60px] w-[60px] object-cover"
+                                        />
+                                        <div className="text-sm space-y-1">
+                                            <p className="text-muted-foreground">~[스타벅스]</p>
+                                            <h3 className="">아이스 아메리카노</h3>
+                                            <p className="text-muted-foreground">~12월 31일 까지</p>
+                                        </div>
+                                    </div>
+                                    <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
+                                        <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
+                                        <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
+                                    </div>
+                                    <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
+                                        <div className="h-full flex flex-col shrink-0 justify-center items-center">
+                                            <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
+                                            <div className="text-sm text-primary">300 P</div>
+                                        </div>
+                                    </div>
+                                </div >
+                                <div className="h-[80px] flex flex-row items-center justify-between relative"  >
+                                    <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
+                                        <Image
+                                            src="/images/Starbucks.png"
+                                            alt="Starbucks"
+                                            width={80}
+                                            height={80}
+                                            className="h-[60px] w-[60px] object-cover"
+                                        />
+                                        <div className="text-sm space-y-1">
+                                            <p className="text-muted-foreground">~[스타벅스]</p>
+                                            <h3 className="">아이스 아메리카노</h3>
+                                            <p className="text-muted-foreground">~12월 31일 까지</p>
+                                        </div>
+                                    </div>
+                                    <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
+                                        <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
+                                        <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
+                                    </div>
+                                    <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
+                                        <div className="h-full flex flex-col shrink-0 justify-center items-center">
+                                            <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
+                                            <div className="text-sm text-primary">300 P</div>
+                                        </div>
+                                    </div>
+                                </div >
+                                <div className="h-[80px] flex flex-row items-center justify-between relative"  >
+                                    <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
+                                        <Image
+                                            src="/images/Starbucks.png"
+                                            alt="Starbucks"
+                                            width={80}
+                                            height={80}
+                                            className="h-[60px] w-[60px] object-cover"
+                                        />
+                                        <div className="text-sm space-y-1">
+                                            <p className="text-muted-foreground">~[스타벅스]</p>
+                                            <h3 className="">아이스 아메리카노</h3>
+                                            <p className="text-muted-foreground">~12월 31일 까지</p>
+                                        </div>
+                                    </div>
+                                    <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
+                                        <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
+                                        <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-full' />
+                                        <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
+                                    </div>
+                                    <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
+                                        <div className="h-full flex flex-col shrink-0 justify-center items-center">
+                                            <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
+                                            <div className="text-sm text-primary">300 P</div>
+                                        </div>
+                                    </div>
+                                </div >
                             </div >
-                            <div className="h-[80px] flex flex-row items-center justify-between relative"  >
-                                <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
-                                    <Image
-                                        src="/images/Starbucks.png"
-                                        alt="Starbucks"
-                                        width={80}
-                                        height={80}
-                                        className="h-[60px] w-[60px] object-cover"
-                                    />
-                                    <div className="text-sm space-y-1">
-                                        <p className="text-muted-foreground">~[스타벅스]</p>
-                                        <h3 className="">아이스 아메리카노</h3>
-                                        <p className="text-muted-foreground">~12월 31일 까지</p>
-                                    </div>
-                                </div>
-                                <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
-                                    <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
-                                    <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
-                                </div>
-                                <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
-                                    <div className="h-full flex flex-col shrink-0 justify-center items-center">
-                                        <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
-                                        <div className="text-sm text-primary">300 P</div>
-                                    </div>
-                                </div>
-                            </div >
-                            <div className="h-[80px] flex flex-row items-center justify-between relative"  >
-                                <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
-                                    <Image
-                                        src="/images/Starbucks.png"
-                                        alt="Starbucks"
-                                        width={80}
-                                        height={80}
-                                        className="h-[60px] w-[60px] object-cover"
-                                    />
-                                    <div className="text-sm space-y-1">
-                                        <p className="text-muted-foreground">~[스타벅스]</p>
-                                        <h3 className="">아이스 아메리카노</h3>
-                                        <p className="text-muted-foreground">~12월 31일 까지</p>
-                                    </div>
-                                </div>
-                                <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
-                                    <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
-                                    <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
-                                </div>
-                                <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
-                                    <div className="h-full flex flex-col shrink-0 justify-center items-center">
-                                        <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
-                                        <div className="text-sm text-primary">300 P</div>
-                                    </div>
-                                </div>
-                            </div >
-                            <div className="h-[80px] flex flex-row items-center justify-between relative"  >
-                                <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
-                                    <Image
-                                        src="/images/Starbucks.png"
-                                        alt="Starbucks"
-                                        width={80}
-                                        height={80}
-                                        className="h-[60px] w-[60px] object-cover"
-                                    />
-                                    <div className="text-sm space-y-1">
-                                        <p className="text-muted-foreground">~[스타벅스]</p>
-                                        <h3 className="">아이스 아메리카노</h3>
-                                        <p className="text-muted-foreground">~12월 31일 까지</p>
-                                    </div>
-                                </div>
-                                <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
-                                    <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
-                                    <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
-                                </div>
-                                <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
-                                    <div className="h-full flex flex-col shrink-0 justify-center items-center">
-                                        <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
-                                        <div className="text-sm text-primary">300 P</div>
-                                    </div>
-                                </div>
-                            </div >
-                            <div className="h-[80px] flex flex-row items-center justify-between relative"  >
-                                <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 px-2 rounded-lg shadow-lg ">
-                                    <Image
-                                        src="/images/Starbucks.png"
-                                        alt="Starbucks"
-                                        width={80}
-                                        height={80}
-                                        className="h-[60px] w-[60px] object-cover"
-                                    />
-                                    <div className="text-sm space-y-1">
-                                        <p className="text-muted-foreground">~[스타벅스]</p>
-                                        <h3 className="">아이스 아메리카노</h3>
-                                        <p className="text-muted-foreground">~12월 31일 까지</p>
-                                    </div>
-                                </div>
-                                <div className='absolute right-20 translate-x-1/2 z-10 h-[calc(100%-17px)] flex flex-col items-center gap-2'>
-                                    <div className='h-1/3 w-0.5 bg-gradient-to-b from-white to-border/60 rounded-b-full' />
-                                    <div className='h-1/3 w-0.5 bg-border/80 rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-full' />
-                                    <div className='h-1/3 w-0.5 bg-border rounded-t-full' />
-                                </div>
-                                <div className="h-full w-20 rounded-lg shadow-lg  px-4 bg-[#FFEFE8]">
-                                    <div className="h-full flex flex-col shrink-0 justify-center items-center">
-                                        <Icons.currency fill={"hsl(var(--primary))"} className="size-6" />
-                                        <div className="text-sm text-primary">300 P</div>
-                                    </div>
-                                </div>
-                            </div >
-                        </div >
-                    </div>
-                </TabsContent>
-                <TabsContent value='tab2' className=''>
-                    <div className='flex flex-col gap-2 divide-y-8 divide-[#F7F7F7]'>
-                        <div className='px-4 py-4 space-y-4'>
-                            <div className='w-full aspect-video rounded-xl bg-[#F7F7F7]' />
-                            <div className='flex items-start justify-between'>
-                                <div>
-                                    <div className='font-semibold'>제목 텍스트 영역 입니다.</div>
-                                    <div className='text-sm text-muted-foreground'>내용 텍스트 영역입니다. 내용입니다.</div>
-                                </div>
-                                <Share2Icon className='text-primary' />
-                            </div>
                         </div>
-                        <div className='px-4 py-4 space-y-4'>
-                            <div className='w-full aspect-video rounded-xl bg-[#F7F7F7]' />
-                            <div className='flex items-start justify-between'>
-                                <div>
-                                    <div className='font-semibold'>제목 텍스트 영역 입니다.</div>
-                                    <div className='text-sm text-muted-foreground'>내용 텍스트 영역입니다. 내용입니다.</div>
+                    </TabsContent>
+                    <TabsContent value='tab2' className=''>
+                        <div className='flex flex-col gap-2 divide-y-8 divide-[#F7F7F7]'>
+                            <div className='px-4 py-4 space-y-4'>
+                                <div className='w-full aspect-video rounded-xl bg-[#F7F7F7]' />
+                                <div className='flex items-start justify-between'>
+                                    <div>
+                                        <div className='font-semibold'>제목 텍스트 영역 입니다.</div>
+                                        <div className='text-sm text-muted-foreground'>내용 텍스트 영역입니다. 내용입니다.</div>
+                                    </div>
+                                    <Share2Icon className='text-primary' />
                                 </div>
-                                <Share2Icon className='text-primary' />
                             </div>
-                        </div>
-                        <div className='px-4 py-4 space-y-4'>
-                            <div className='w-full aspect-video rounded-xl bg-[#F7F7F7]' />
-                            <div className='flex items-start justify-between'>
-                                <div>
-                                    <div className='font-semibold'>제목 텍스트 영역 입니다.</div>
-                                    <div className='text-sm text-muted-foreground'>내용 텍스트 영역입니다. 내용입니다.</div>
+                            <div className='px-4 py-4 space-y-4'>
+                                <div className='w-full aspect-video rounded-xl bg-[#F7F7F7]' />
+                                <div className='flex items-start justify-between'>
+                                    <div>
+                                        <div className='font-semibold'>제목 텍스트 영역 입니다.</div>
+                                        <div className='text-sm text-muted-foreground'>내용 텍스트 영역입니다. 내용입니다.</div>
+                                    </div>
+                                    <Share2Icon className='text-primary' />
                                 </div>
-                                <Share2Icon className='text-primary' />
                             </div>
-                        </div>
-                        <div className='px-4 py-4 space-y-4'>
-                            <div className='w-full aspect-video rounded-xl bg-[#F7F7F7]' />
-                            <div className='flex items-start justify-between'>
-                                <div>
-                                    <div className='font-semibold'>제목 텍스트 영역 입니다.</div>
-                                    <div className='text-sm text-muted-foreground'>내용 텍스트 영역입니다. 내용입니다.</div>
+                            <div className='px-4 py-4 space-y-4'>
+                                <div className='w-full aspect-video rounded-xl bg-[#F7F7F7]' />
+                                <div className='flex items-start justify-between'>
+                                    <div>
+                                        <div className='font-semibold'>제목 텍스트 영역 입니다.</div>
+                                        <div className='text-sm text-muted-foreground'>내용 텍스트 영역입니다. 내용입니다.</div>
+                                    </div>
+                                    <Share2Icon className='text-primary' />
                                 </div>
-                                <Share2Icon className='text-primary' />
                             </div>
+                            <div className='px-4 py-4 space-y-4'>
+                                <div className='w-full aspect-video rounded-xl bg-[#F7F7F7]' />
+                                <div className='flex items-start justify-between'>
+                                    <div>
+                                        <div className='font-semibold'>제목 텍스트 영역 입니다.</div>
+                                        <div className='text-sm text-muted-foreground'>내용 텍스트 영역입니다. 내용입니다.</div>
+                                    </div>
+                                    <Share2Icon className='text-primary' />
+                                </div>
+                            </div>
+                            <Separator className='h-2 bg-[#F7F7F7]' />
                         </div>
-                    </div>
-                </TabsContent>
+                    </TabsContent>
+                    <ScrollBar className="w-0.5" />
+                </ScrollArea>
             </Tabs>
         </div >
     )
