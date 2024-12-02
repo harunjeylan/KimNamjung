@@ -1,5 +1,3 @@
-import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
 import { Icons } from '@/components/ui/icons'
 import { Separator } from '@/components/ui/separator'
 import Link from 'next/link'

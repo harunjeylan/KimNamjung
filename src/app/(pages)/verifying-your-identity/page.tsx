@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent, DialogHeader, DialogTrigger } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Icons } from '@/components/ui/icons'
 import { Separator } from '@/components/ui/separator'
 import { DialogTitle } from '@radix-ui/react-dialog'

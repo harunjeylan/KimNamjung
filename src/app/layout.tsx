@@ -1,9 +1,7 @@
+import DesktopLayout from "@/components/desktop-layout";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import DesktopLayout from "@/components/desktop-layout";
-import BottomNav from "@/components/bottom-nav";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
