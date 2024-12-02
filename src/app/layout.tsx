@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import DesktopLayout from "@/components/desktop-layout";
+import BottomNav from "@/components/bottom-nav";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden`}
       >
-        {children}
+        <div className="flex max-w-[60rem] mx-auto gap-6 justify-between">
+          <div className="hidden lg:block w-full md:max-w-[390px] max-auto h-screen">
+            <DesktopLayout />
+          </div>
+          <div className="relative w-full max-w-[390px] mx-auto lg:mx-0 h-screen border">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
