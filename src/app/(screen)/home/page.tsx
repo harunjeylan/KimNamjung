@@ -59,7 +59,7 @@ export default function Home() {
           <Carousel className="w-full max-w-[100vw]">
             <CarouselContent className='max-w-[100vw] px-4'>
               {Array.from({ length: 6 }).map((_, index) => (
-                <CarouselItem key={index} className='relative max-w-[340px]'>
+                <CarouselItem key={index} className='relative max-w-[calc(100vw-4rem)]'>
                   <div key={index} className="w-full h-[187px] bg-[#FFD8D8] rounded-xl" />
                 </CarouselItem>
               ))}
@@ -72,7 +72,7 @@ export default function Home() {
           <Carousel className="w-full max-w-[100vw]">
             <CarouselContent className='max-w-[100vw] px-4'>
               {Array.from({ length: 6 }).map((_, index) => (
-                <CarouselItem key={index} className='relative max-w-[300px]'>
+                <CarouselItem key={index} className='relative max-w-[calc(100vw-4rem)]'>
                   <div className="w-full h-[80px] my-4 flex"  >
                     <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 ps-2 shadow-lg rounded-xl">
                       <Image
