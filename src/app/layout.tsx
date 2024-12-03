@@ -2,6 +2,7 @@ import DesktopLayout from "@/components/desktop-layout";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Image from "next/image";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,7 +35,10 @@ export default function RootLayout({
             <DesktopLayout />
           </div>
           <div className="relative w-full sm:max-w-[390px] mx-auto lg:mx-0 h-screen lg:border">
-            {children}
+            <Image src={'/images/logo3.png'} alt="logo3" className="absolute bottom-3 left-0 -translate-x-2/3 -rotate-6 -z-10" width={200} height={200} />
+            <div className="bg-background">
+              {children}
+            </div>
           </div>
         </div>
       </body>
