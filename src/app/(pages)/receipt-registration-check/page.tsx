@@ -7,7 +7,7 @@ export default function Page() {
     return (
         <div className='relative py-6 flex flex-col justify-between items-center h-full gap-4'>
             <nav className='w-full flex flex-col gap-4'>
-                <div className='w-[350px] mx-auto flex justify-between items-center '>
+                <div className='w-full px-4 mx-auto flex justify-between items-center '>
                     <Link href={".."} className='flex items-center gap-4'>
                         <Icons.x className='size-5' />
                         <span className='text-lg'>
@@ -18,9 +18,9 @@ export default function Page() {
                 <Separator />
             </nav>
             <div className='w-full h-full pt-10'>
-                <div className='w-[350px] mx-auto flex flex-col gap-2 items-center text-center space-y-8'>
+                <div className='w-full px-4 mx-auto flex flex-col gap-2 items-center text-center space-y-8'>
                     <div className=''>
-                        <div className='w-[350px] mx-auto'>
+                        <div className='w-full px-4 mx-auto'>
                             <Button size={'lg'} className='w-full rounded-2xl py-6'>확인</Button>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <div className='w-[350px] mx-auto'>
+            <div className='w-full px-4 mx-auto'>
                 <Button size={'lg'} className='w-full rounded-lg py-6'>사진 등록</Button>
             </div>
         </div>

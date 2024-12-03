@@ -17,7 +17,7 @@ export default function Page() {
     return (
         <div className='relative'>
             <nav className='w-full flex flex-col gap-4 py-4'>
-                <div className='w-[350px] mx-auto flex justify-between items-center '>
+                <div className='w-full px-4 mx-auto flex justify-between items-center '>
                     <Link href={".."} className='flex items-center gap-4'>
                         <Icons.arrowLeft className='size-5' />
                         <span className='text-lg'>

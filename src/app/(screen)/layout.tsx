@@ -7,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-screen">
       {children}
       <div className="absolute bottom-0 right-0 w-full h-[70px]">
         <BottomNav />

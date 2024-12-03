@@ -12,7 +12,7 @@ import Link from 'next/link'
 export default function Page() {
     return (
         <div className='relative py-6 flex flex-col justify-between items-center h-full gap-4'>
-            <nav className='w-[350px] mx-auto flex justify-between items-center '>
+            <nav className='w-full px-4 mx-auto flex justify-between items-center '>
                 <Link href={".."}>
                     <ArrowLeft />
                 </Link>
@@ -21,7 +21,7 @@ export default function Page() {
             </nav>
             <Drawer>
                 <div className='w-full h-full pt-10'>
-                    <div className='w-[350px] mx-auto flex flex-col gap-2 items-center text-center'>
+                    <div className='w-full px-4 mx-auto flex flex-col gap-2 items-center text-center'>
                         <div className='text-muted-foreground'>
                             등록한 영수증의 항목을 체크해주세요
                         </div>

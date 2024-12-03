@@ -56,8 +56,8 @@ export default function Home() {
         </div>
         <div className="space-y-2">
           <div className="w-full px-4 text-lg">매일매일 쏟아지는 다양한 혜택</div>
-          <Carousel className="w-full">
-            <CarouselContent className='px-4'>
+          <Carousel className="w-full max-w-[100vw]">
+            <CarouselContent className='max-w-[100vw] px-4'>
               {Array.from({ length: 6 }).map((_, index) => (
                 <CarouselItem key={index} className='relative max-w-[340px]'>
                   <div key={index} className="w-full h-[187px] bg-[#FFD8D8] rounded-xl" />
@@ -69,11 +69,11 @@ export default function Home() {
         </div>
         <div className="space-y-2">
           <div className="w-full px-4 text-lg">상품 구매</div>
-          <Carousel className="w-full">
-            <CarouselContent className='px-4'>
+          <Carousel className="w-full max-w-[100vw]">
+            <CarouselContent className='max-w-[100vw] px-4'>
               {Array.from({ length: 6 }).map((_, index) => (
-                <CarouselItem key={index} className='relative max-w-[340px]'>
-                  <div className="w-full h-[80px] my-4 flex flex-row items-center justify-between"  >
+                <CarouselItem key={index} className='relative max-w-[300px]'>
+                  <div className="w-full h-[80px] my-4 flex"  >
                     <div className="w-[calc(100%-5rem)] h-full flex items-center gap-4 ps-2 shadow-lg rounded-xl">
                       <Image
                         src="/images/Starbucks.png"

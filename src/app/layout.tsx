@@ -33,7 +33,7 @@ export default function RootLayout({
           <div className="hidden lg:block w-full md:max-w-[390px] max-auto h-screen">
             <DesktopLayout />
           </div>
-          <div className="relative w-full max-w-[390px] mx-auto lg:mx-0 h-screen border">
+          <div className="relative w-full sm:max-w-[390px] mx-auto lg:mx-0 h-screen lg:border">
             {children}
           </div>
         </div>
